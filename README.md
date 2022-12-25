@@ -1,0 +1,3 @@
+# Simple-Port-Scanner
+
+This code defines a function sniff_ports that takes a hostname, a range of ports, and a protocol as input, and returns a list of open ports on the specified host. The function first creates a socket using the AF_INET address family and either the SOCK_STREAM or SOCK_DGRAM socket type, depending on the specified protocol. It then sets a timeout for the socket using settimeout, and tries to connect to the port using connect_ex. If the connection is successful, the port is added to the list of open ports. If the connection fails, the port is marked as closed. The function then iterates through the range of ports and repeats this process for each port. Finally, the function prints a summary of the findings and returns the list of open ports.
